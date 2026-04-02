@@ -1,0 +1,25 @@
+name = "zig"
+type = "language"
+
+[platform.linux]
+archive-prefix = "zig-{arch}-linux-{version}"
+checksum-file = "zig-{arch}-linux-{version}.tar.xz.minisig"
+download-file = "zig-{arch}-linux-{version}.tar.xz"
+
+[platform.macos]
+archive-prefix = "zig-{arch}-macos-{version}"
+checksum-file = "zig-{arch}-macos-{version}.tar.xz.minisig"
+download-file = "zig-{arch}-macos-{version}.tar.xz"
+
+[platform.windows]
+archive-prefix = "zig-{arch}-windows-{version}"
+checksum-file = "zig-{arch}-windows-{version}.tar.xz.minisig"
+download-file = "zig-{arch}-windows-{version}.tar.xz"
+
+[install]
+checksum-public-key="RWSGOq2NVecA2UPNdBUZykf1CCb147pkmdtYxgb3Ti+JO/wCYvhbAb/U"
+checksum-url = "https://ziglang.org/download/{version}/{checksum_file}"
+download-url = "https://ziglang.org/download/{version}/{download_file}"
+
+[resolve]
+git-url = "https://codeberg.org/ziglang/zig.git"
